@@ -1,0 +1,92 @@
+<html>
+<head></head>
+<body>
+
+<div id="pieChart"></div>
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="https://rawgit.com/benkeen/d3pie/master/d3pie/d3pie.min.js" charset="utf-8"></script>
+<script>
+var pie = new d3pie("pieChart", {
+	"header": {
+		"title": {
+			"text": "Population who Smoking or Non-Smoking",
+			"fontSize": 22
+		},
+		"subtitle": {
+			"text": "from 54.8 million Thai people who age more than 15 years old",
+			"color": "#999999",
+			"fontSize": 13
+		},
+		"titleSubtitlePadding": 9
+	},
+	"footer": {
+		"text": "Thailand National Statistical Office - 2014",
+		"color": "#999999",
+		"fontSize": 10,
+		"font": "open sans",
+		"location": "bottom-left"
+	},
+	"size": {
+		"canvasWidth": 600
+	},
+	"data": {
+		"sortOrder": "label-desc",
+		"content": [
+			{
+				"label": "Non-smoking",
+				"value": 43467800,
+				"color": "#0c6197"
+			},
+			{
+				"label": "Smoking",
+				"value": 11363400,
+				"color": "#cb2121"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"format": "label-value2",
+			"pieDistance": 32
+		},
+		"inner": {
+			"hideWhenLessThanPercentage": 3
+		},
+		"mainLabel": {
+			"fontSize": 13
+		},
+		"percentage": {
+			"color": "#ffffff",
+			"fontSize": 12,
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#adadad",
+			"fontSize": 12
+		},
+		"lines": {
+			"enabled": true
+		}
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear",
+			"speed": 400,
+			"size": 8
+		}
+	},
+	"misc": {
+		"colors": {
+			"background": "#ffffff"
+		},
+		"gradient": {
+			"enabled": true,
+			"percentage": 100
+		}
+	}
+});
+</script>
+
+</body>
+</html>
