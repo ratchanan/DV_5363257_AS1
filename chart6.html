@@ -1,0 +1,95 @@
+<html>
+<head></head>
+<body>
+
+<div id="pieChart"></div>
+
+<script src="https://rawgit.com/mbostock/d3/master/d3.min.js" charset="utf-8"></script>
+<script src="https://rawgit.com/benkeen/d3pie/master/d3pie/d3pie.min.js" charset="utf-8"></script>
+<script>
+var pie = new d3pie("pieChart", {
+	"header": {
+		"title": {
+			"text": "Inside/Outside Home Smoking Behavior",
+			"fontSize": 22
+		},
+		"subtitle": {
+			"text": "with other members in home",
+			"color": "#999999",
+			"fontSize": 13
+		},
+		"titleSubtitlePadding": 9
+	},
+	"footer": {
+		"text": "Thailand National Statistical Office - 2014",
+		"color": "#999999",
+		"fontSize": 10,
+		"font": "open sans",
+		"location": "bottom-left"
+	},
+	"size": {
+		"canvasWidth": 600
+	},
+	"data": {
+		"content": [
+			{
+				"label": "Outside",
+				"value": 59.4,
+				"color": "#50a124"
+			},
+			{
+				"label": "Not sure",
+				"value": 1.1,
+				"color": "#dacece"
+			},
+			{
+				"label": "Inside",
+				"value": 39.5,
+				"color": "#da2424"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"pieDistance": 32
+		},
+		"inner": {
+			"hideWhenLessThanPercentage": 3
+		},
+		"mainLabel": {
+			"fontSize": 13
+		},
+		"percentage": {
+			"color": "#ffffff",
+			"fontSize": 12,
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#adadad",
+			"fontSize": 12
+		},
+		"lines": {
+			"enabled": true
+		}
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear",
+			"speed": 400,
+			"size": 8
+		}
+	},
+	"misc": {
+		"colors": {
+			"background": "#ffffff"
+		},
+		"gradient": {
+			"enabled": true,
+			"percentage": 100
+		}
+	}
+});
+</script>
+
+</body>
+</html>
